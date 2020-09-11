@@ -1,0 +1,73 @@
+
+<div class="content"><div class="ic">More Website Templates @ TemplateMonster.com - April 07, 2014!</div>
+<div class="container_12">
+  <div class="grid_12">
+    <h3>Find Us</h3>
+    <div class="map">
+      <figure>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24214.807650104907!2d-73.94846048422478!3d40.65521573400813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1395650655094" style="border:0"></iframe>
+      </figure>
+    </div>
+  </div>
+  <div class="grid_5">
+    <h3>Contact Info</h3>
+    <div class="map">
+
+      <address>
+        <dl>
+          <dt id="glavno">The Company Name Inc. <br>
+            9870 St Vincent Place,<br>
+            Glasgow, DC 45 Fr 45.
+          </dt>
+          <dd class="sporedno"><span >Telephone:</span> +1 800 603 6035</dd>
+          <dd class="sporedno"><span>FAX:</span> +1 800 889 9898</dd>
+          <dd  class="sporedno">E-mail: <a href="#" class="color1">mail@demolink.org</a></dd>
+        </dl>
+      </address>
+    </div>
+  </div>
+  <div class="grid_6 prefix_1">
+    <h3>Contact Form</h3>
+    <div class="alert alert-success" *ngIf="message" role="alert">
+      Message is sent!
+    </div>
+    <form  [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control"  formControlName="firstName" placeholder="First name" #firstName>
+          <div *ngIf="!contactForm.get('firstName').valid && contactForm.get('firstName').touched">
+            <p style="color: red;">Please enter a valid First Name </p>
+          </div>
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" formControlName="LastName" placeholder="Last name">
+          <div *ngIf="!contactForm.get('LastName').valid && contactForm.get('LastName').touched">
+            <p style="color: red;">Please enter a valid Last Name </p>
+          </div>
+        </div>
+
+      </div>
+      <br/>
+
+    <div class="form-group">
+        <input type="text" class="form-control" formControlName="Email" placeholder="Email">
+        <div *ngIf="!contactForm.get('Email').valid && contactForm.get('Email').touched">
+          <p style="color: red;">Please enter a valid Email </p>
+        </div>
+
+      </div>
+
+      <div class="form-group">
+
+        <textarea class="form-control" id="exampleFormControlTextarea1" formControlName="Message" rows="5" placeholder="Message"></textarea>
+        <div *ngIf="!contactForm.get('Message').valid && contactForm.get('Message').touched">
+          <p style="color: red;">Message must contain 3-200 characters</p>
+      </div>
+      </div>
+      <button type="submit" class="btn btn-warning" [disabled]="!contactForm.valid">Send</button>
+      <button type="button" class="btn btn-warning" (click)="clear()" id="dugmeclear">Clear</button>
+    </form>
+  </div>
+  <div class="clear"></div>
+</div>
+</div>

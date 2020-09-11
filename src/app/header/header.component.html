@@ -1,0 +1,26 @@
+
+  <div class="main">
+<!--==============================header=================================-->
+    <header>
+      <div class="menu_block ">
+        <div class="container_88">
+        <span> Time: {{ datum | date:'short' }}</span>
+          <div class="grid_12">
+          <app-navigation></app-navigation>
+            <div class="clear"></div>
+          </div>
+          <div class="clear"></div>
+            <span>+1800 559 6580</span>
+        </div>
+      </div>
+      <div class="container_12">
+        <div class="grid_12" (mouseover)="rotate180()" (mouseleave)="totate0()" [@rotateY]="rotate">
+          <h1>
+            <a routerLink="/">
+              <img  src="assets/images/logo.png" alt="Your Happy Family">
+            </a>
+          </h1>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </header>

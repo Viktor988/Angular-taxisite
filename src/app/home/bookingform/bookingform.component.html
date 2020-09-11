@@ -1,0 +1,110 @@
+<div class="grid_5">
+  <h3>Booking Form</h3>
+
+  <form id="bookingForm" [formGroup]="bookingForm" (ngSubmit)="onSubmitBookingForm()">
+    <div class="alert alert-success" *ngIf="message" role="alert">
+      Message is sent!
+    </div>
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" formControlName="FirstNameBooking"  placeholder="First name">
+        <div *ngIf="!bookingForm.get('FirstNameBooking').valid && bookingForm.get('FirstNameBooking').touched">
+          <p style="color: red;">Please enter a valid First Name </p>
+        </div>
+
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" formControlName="LastNameBooking" placeholder="Last name">
+        <div *ngIf="!bookingForm.get('LastNameBooking').valid && bookingForm.get('LastNameBooking').touched">
+          <p style="color: red;">Please enter a valid Lirst Name </p>
+        </div>
+      </div>
+    </div><br/>
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" formControlName="AddressNameBooking"  placeholder="Address">
+        <div *ngIf="!bookingForm.get('AddressNameBooking').valid && bookingForm.get('AddressNameBooking').touched">
+          <p style="color: red;">Please enter a valid Address </p>
+        </div>
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" formControlName="NumberBooking"  placeholder="Number">
+        <div *ngIf="!bookingForm.get('NumberBooking').valid && bookingForm.get('NumberBooking').touched">
+          <p style="color: red;">Please enter a valid Number </p>
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <br/>
+    <div class="form-group row">
+      <label for="example-time-input" class="col-2 col-form-label">Email:</label>
+      <div class="col-10">
+        <input type="text" class="form-control" formControlName="EmailBooking"  placeholder="Email">
+        <div *ngIf="!bookingForm.get('EmailBooking').valid && bookingForm.get('EmailBooking').touched">
+          <p style="color: red;">Please enter a valid Email </p>
+        </div>
+
+      </div>
+    </div>
+
+  <div class="form-group row">
+    <label for="example-time-input" class="col-2 col-form-label">Time</label>
+    <div class="col-10">
+      <input class="form-control" formControlName="TimeBooking" type="time"  id="example-time-input">
+      <div *ngIf="!bookingForm.get('TimeBooking').valid && bookingForm.get('TimeBooking').touched">
+        <p style="color: red;">Time is required </p>
+      </div>
+    </div>
+  </div>
+    <div class="clear"></div>
+    <div class="form-group row">
+      <label for="example-date-input" class="col-2 col-form-label">Date</label>
+      <div class="col-10">
+        <input class="form-control" formControlName="DateBooking"  type="date" (change)="checkdate($event)"  id="example-date-input">
+
+          <p *ngIf="!flag" style="color: red;">The reservation must be made at least one day in advance </p>
+          <div *ngIf="!bookingForm.get('DateBooking').valid && bookingForm.get('DateBooking').touched">
+            <p style="color: red;">Date is required </p>
+          </div>
+
+
+      </div>
+    </div>
+    <div class="clear"></div>
+  <br/>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" value="Economy" formControlName="car" name="car"  id="exampleRadios1" value="Economy" checked>
+      <label class="form-check-label klasetekst" for="exampleRadios1">
+        Economy
+      </label>
+    </div>
+    <br/>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" value="Standard" formControlName="car" name="car"  id="exampleRadios1" value="Standard">
+      <label class="form-check-label klasetekst" for="exampleRadios1">
+        Standard
+      </label>
+    </div>
+    <br/>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" value="Lux" formControlName="car" name="car"  id="exampleRadios1" value="Lux">
+      <label class="form-check-label klasetekst" for="exampleRadios1">
+     Lux
+      </label>
+    </div>
+
+    <br/>
+    <div class="clear"></div>
+
+
+    <div class="clear"></div>
+    <br/>
+    <div class="tmTextarea">
+      <textarea name="Message" placeHolder="Message"formControlName="MessageBooking"></textarea>
+      <div *ngIf="!bookingForm.get('MessageBooking').valid && bookingForm.get('MessageBooking').touched">
+        <p style="color: red;">Message must contain 3-200 characters</p>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-warning" [disabled]="!bookingForm.valid ||!flag">Send</button>
+  </form>
+</div>

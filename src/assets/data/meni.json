@@ -1,0 +1,28 @@
+[{
+
+  "id":1,
+  "naziv":"Home",
+  "link":"/"
+},
+{
+
+  "id":2,
+  "naziv":"Cars",
+  "link":"/cars"
+},
+{
+
+  "id":3,
+  "naziv":"Services",
+  "link":"/service"
+},
+{
+
+  "id":4,
+  "naziv":"Contact",
+  "link":"/contact"
+}
+
+
+
+]

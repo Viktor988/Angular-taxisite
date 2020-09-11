@@ -1,0 +1,23 @@
+[
+  {
+    "id":1,
+    "slika":"assets/images/page4_img1.jpg",
+    "naslov":"Booking taxi",
+    "tekst":"Booking a taxi and it will arrive at a defined time"
+  },{
+    "id":2,
+    "slika":"assets/images/page4_img4.jpg",
+    "naslov":"Waiting for you",
+    "tekst":"Waiting for you until you finish what you need."
+  },
+  {
+    "id":3,
+    "slika":"assets/images/page4_img5.jpg",
+    "naslov":"Driving outside the country",
+    "tekst":"Driving abroad at a special price."
+  }
+
+
+
+
+]

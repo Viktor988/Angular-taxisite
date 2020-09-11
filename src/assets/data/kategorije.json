@@ -1,0 +1,25 @@
+[{
+  "id":1,
+  "link":"/cars",
+  "slika":"assets/images/page1_img1.jpg",
+  "naziv":"Economy"
+
+
+},
+{
+  "id":2,
+  "link":"/cars",
+  "slika":"assets/images/page1_img2.jpg",
+  "naziv":"Standard"
+
+
+},{
+  "id":3,
+  "link":"/cars",
+  "slika":"assets/images/page1_img3.jpg",
+  "naziv":"Lux"
+
+
+}
+
+]

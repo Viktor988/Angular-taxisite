@@ -1,0 +1,4 @@
+<div class="grid_6 prefix_1">
+  <a *ngFor="let c of kategorije" [routerLink]="['/cars', c.id]" class="type"><img src="{{ c.slika }}" alt=""><span  class="type_caption">{{ c.naziv }}</span></a>
+
+</div>
